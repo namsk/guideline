@@ -10,6 +10,9 @@
 
 맥에서는 [Homebrew](http://brew.sh/) 패키지 매니저를 이용하면 `rbenv`과 `ruby-build`를 쉽게 설치할 수 있다.
 
+Homebrew는 한줄의 명령어로 설치 가능한데 해당 명령어는 계속 변경되기 때문에 문서에 언급하지 않는다. http://brew.sh 하단의 Install Homebrew를 참고.
+
+Homebrew를 이용한 `rbenv`, `ruby-build` 설치 방법
 
 ```
 $ brew update
