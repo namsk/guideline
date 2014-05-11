@@ -12,7 +12,7 @@ module.exports = function (grunt) {
                 input: "./",
                 title: "초보자를 위한 레일스 가이드라인",
                 description: "The Guideline Book for Rails Startups",
-                github: "RORLabGitBook/guideline.git"
+                github: "RORLabGitBook/guideline"
             }
         },
         'gh-pages': {
