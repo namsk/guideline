@@ -1,0 +1,3 @@
+# bulletin_type
+
+작성 중...

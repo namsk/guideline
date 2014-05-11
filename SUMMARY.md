@@ -19,6 +19,7 @@
     * [friendly_id 젬 사용하기](contents/walkthrough/top_menu.md)
     * [posts 컨트롤러 변경](contents/walkthrough/posts_controller_modified.md)
     * [posts 뷰 변경](contents/walkthrough/posts_view_file.md)
+    * [게시판 레이아웃 작성하기](contents/walkthrough/bulletin_type.md)
 * [프로젝트 배포하기](deployment/first.md)
 * [부록](appendices/appendix.md)
 
