@@ -5,11 +5,10 @@
 
 **공동집필자** :
 
-* 저자1(author1@email.com)
-* 저자2(author2@email.com)
-* 저자3(author3@email.com)
-* 저자4(author4@email.com)
-* 저자5(author5@email.com)
+* 정창훈(iamseapy@gmail.com)
+* 최효성(hschoidr@gmail.com)
 * ...
 
+(가나다순)
 
+> 공동집필자로 등록 후 활동을 원하시는 분은 연락([rorlab@gmail.com](mailto:rorlab@gmail.com))을 주시기 바랍니다.
