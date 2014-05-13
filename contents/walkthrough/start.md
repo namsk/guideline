@@ -1,6 +1,6 @@
 # 프로젝트 따라하기
 
-이번 장에서는 실제로 레일스 프로젝트를 작성해 가면서 레일스 프레임워크의 다양한 기능을 알아도록 하겠다.
+이번 장에서는 실제로 레일스 프로젝트를 작성해 가면서 레일스 프레임워크의 다양한 기능을 알아보도록 하겠다.
 
 프로젝트명은 `Rcafe`라고 정하자. 이 프로젝트는 레일스를 이용하여 카페를 구현하는 것이다.
 
@@ -118,7 +118,7 @@ $ rails new rcafe
 
 > Spring is our new application preloader. It makes running tests, rake, and generators much faster on large applications. You could think of what we had before as the CGI-mode of the command-line. Every time you ran rake, your entire application would be loaded from scratch, only to be thrown out as soon as the command finished. With Spring, your application is a persistent process that can be reused across commands, so only the first run is slow. And we automatically detect code changes, and reload just those parts. It makes a big difference!
 
-이제 프로젝트 디렉토리로 이동하여 터미널에서 아래와 같이 로컬 웨서버를 실행한다.
+이제 프로젝트 디렉토리로 이동하여 터미널에서 아래와 같이 로컬 웹서버를 실행한다.
 
 ```
 $ bin/rails server
