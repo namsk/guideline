@@ -23,4 +23,6 @@
     * [게시판 레이아웃 작성하기](contents/walkthrough/bulletin_type.md)
 * [프로젝트 배포하기](deployment/first.md)
 * [부록](appendices/appendix.md)
+    * [추천도서](appendices/books.md)
+    * [추천동영상](appendices/screencasts.md)
 
