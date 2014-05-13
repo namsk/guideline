@@ -8,7 +8,3 @@
 * [소스관리자(GIT) 설치](git.html)
 * [레일스 설치](railsinstall.html)
 * [코드 에디터의 선택](editors.html)
-
-
-
-
