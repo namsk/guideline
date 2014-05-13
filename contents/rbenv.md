@@ -1,4 +1,4 @@
-## rbenv 설치
+# rbenv 설치
 
 [레일스 공식웹사이트](http://rubyonrails.org/download)에서는 `rbenv`을 이용하여 루비를 설치할 것을 권고하고 있다.
 
@@ -18,4 +18,3 @@ Homebrew를 이용한 `rbenv`, `ruby-build` 설치 방법
 $ brew update
 $ brew install rbenv ruby-build
 ```
-

@@ -5,6 +5,7 @@
 * [환경 준비](contents/environments.md)
     * [개발환경](contents/dev_env.md)
     * [rbenv 설치](contents/rbenv.md)
+    * [rvm 설치](contents/rvm.md)
     * [Git 설치](contents/git.md)
     * [레일스 설치](contents/railsinstall.md)
     * [소스코드 에디터](contents/editors.md)
