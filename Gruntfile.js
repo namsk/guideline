@@ -11,7 +11,7 @@ module.exports = function (grunt) {
             development: {
                 input: "./",
                 title: "초보자를 위한 레일스 가이드북",
-                description: "The Guideline Book for Rails Startups",
+                description: "The Guidebook for Rails Startups",
                 github: "RORLabGitBook/guideline"
             }
         },
