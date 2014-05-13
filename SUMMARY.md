@@ -7,6 +7,7 @@
     * [rbenv 설치](contents/rbenv.md)
     * [Git 설치](contents/git.md)
     * [레일스 설치](contents/railsinstall.md)
+    * [소스코드 에디터](contents/editors.md)
     * [운영환경](contents/pro_env.md)
 * [프로젝트 따라하기](contents/walkthrough/start.md)
     * [Gemfile의 작성](contents/walkthrough/gemfile.md)
@@ -22,3 +23,4 @@
     * [게시판 레이아웃 작성하기](contents/walkthrough/bulletin_type.md)
 * [프로젝트 배포하기](deployment/first.md)
 * [부록](appendices/appendix.md)
+
