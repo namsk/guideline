@@ -6,7 +6,7 @@ RESTful URI로부터 `bulletin_id` 또는 `post`의 `id` 값을 받아 해당 `b
 
 `config/routes.rb` 파일을 열어 아래와 같이 수정한다.
 
-```
+``` ruby
 Rails.application.routes.draw do
   resources :bulletins do
     resources :posts
@@ -18,7 +18,7 @@ end
 
 위와 같이 리소스 라우트를 중첩하면 아래와 같은 라우팅을 사용할 수 있게 된다. 이것을 콘솔에서 확인해 보자.
 
-```
+``` bash
 $ bin/rake routes
             Prefix Verb   URI Pattern                                      Controller#Action
     bulletin_posts GET    /bulletins/:bulletin_id/posts(.:format)          posts#index
@@ -59,7 +59,7 @@ Controller#Action : posts#index
 
 `Controller#Action`의 `posts#index`는 `posts` 컨트롤러의 `index` 액션을 호출하라는 의미이다. 여기서는  `app/controllers/posts_controller.rb` 파일의 `index` 액션 코드만을 주목하자.
 
-```
+``` ruby
 class PostsController < ApplicationController
 
   before_action :set_bulletin
