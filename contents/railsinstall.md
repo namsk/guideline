@@ -13,7 +13,7 @@ https://bitnami.com/stack/ruby/installer
 
 http://railsinstaller.org/
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/InKZOPylUSQ" frameborder="0" allowfullscreen></iframe>
+<iframe src="http://www.youtube.com/embed/InKZOPylUSQ" frameborder="0" allowfullscreen></iframe>
 
 ---
 
