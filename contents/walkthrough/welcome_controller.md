@@ -59,7 +59,7 @@ $ bin/rails generate controller welcome index
       create      app/assets/stylesheets/welcome.css.scss
 ```
 
-이 명령 한줄로 여러 개의 파일들이 생성되었다. 모드 의미 있는 파일들이다. 먼저 세번째 줄에 있는 `route` 부분을 보자. 이것은 config/routes.rb 파일에 `get 'welcome/index'`을 추가한다. 확인을 위해서 에디터로 이 파일을 열어 보면 아래와 같이 보일 것이다.
+이 명령 한줄로 여러 개의 파일들이 생성되었다. 모두 의미 있는 파일들이다. 먼저 세번째 줄에 있는 `route` 부분을 보자. 이것은 config/routes.rb 파일에 `get 'welcome/index'`을 추가한다. 확인을 위해서 에디터로 이 파일을 열어 보면 아래와 같이 보일 것이다.
 
 ```
 Rails.application.routes.draw do
