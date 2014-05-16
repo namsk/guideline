@@ -139,8 +139,6 @@ Nginx 서버
   # /etc/init.d/nginx start
   ```
 
-<hr>
-
 MySQL (5.5.36) 서버 ([ref.](http://www.webtatic.com/packages/mysql55/))
 ---
 
@@ -157,12 +155,14 @@ MySQL (5.5.36) 서버 ([ref.](http://www.webtatic.com/packages/mysql55/))
 
  ```
 
+
 * /etc/my.cnf 파일에 아래 줄을 추가해 준다.
 
   ```
   [mysqld]
   character-set-server = utf8
   ```
+
 
 * 권한을 승인한다.
 
@@ -171,9 +171,6 @@ MySQL (5.5.36) 서버 ([ref.](http://www.webtatic.com/packages/mysql55/))
 
   mysql> grant usage on *.* to deployer@localhost identified by 'password';
   ```
-
-
-<hr>
 
 NodeJs 설치
 ---
@@ -188,11 +185,7 @@ NodeJs 설치
 # ./configure
 # make   (6-7분 소요됨)  pc 사양이 좋으면 3분안에 끝나기도 함 ㅎㅎㅎ.
 # make install
-
 ```
-
-
-<hr>
 
 ImageMagick 설치 (시간 많이 걸리네~)
 ---
@@ -220,6 +213,7 @@ ImageMagick 설치 (시간 많이 걸리네~)
  export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
  ```
 
+
 * 그리고, root 계정으로 접속해서
 
   ```
@@ -230,7 +224,7 @@ ImageMagick 설치 (시간 많이 걸리네~)
   # cd ~
   ```
 
-<hr>
+
 배포
 ---
 : 이후부터는 로컬에서 capistrano로 배포작업을 수행한다.
@@ -242,6 +236,7 @@ ImageMagick 설치 (시간 많이 걸리네~)
   gem 'capistrano-rbenv'
   ```
 
+
 * `capistrano`와 `capistrano-rbenv` 젬을  레일스 프로젝트의 `gemfile`에 추가하여, `bundle install` 하면, `capistrano`로 배포시, 특히, `cap deploy:setup` 명령을 실행하면, 자동으로 `rbenv`와 `ruby-build`가 설치되고, 디폴트로 `1.9.3-p194` 버전 루비가 설치된다. `config/deploy.rb` 파일에 `set :rbenv_ruby_version, "1.9.3-p286"` 와 같이 추가해 주면, 원하는 루비 버전을 설치할 수도 있다. [ref.](https://github.com/yyuu/capistrano-rbenv)
 
 <hr>
@@ -249,8 +244,6 @@ ImageMagick 설치 (시간 많이 걸리네~)
 부록
 ===
 : 아래의 설치는 옵션이다.
-
-<hr>
 
 Postfix 설치
 ---
@@ -261,9 +254,6 @@ Postfix 설치
   ```
   # yum install -y postfix
   ```
-
-
-<hr>
 
 Git 업그레이드하기
 ---
@@ -281,8 +271,6 @@ Git 업그레이드하기
 # vim /etc/yum.repos.d/rpmforge.repo
 ```
 
-
-<hr>
 
 Git 별도설치
 ---
@@ -303,7 +291,6 @@ Git 별도설치
   # export PATH=”/opt/git/bin:$PATH”
   ```
 
-<hr>
 구글링 자료 모음
 ----
 - http://www.centos.org [공식홈페이지]
@@ -312,6 +299,6 @@ Git 별도설치
 - http://mcchae.egloos.com/10937303 [지훈현서의 CentOS 6.3 미니멀(서버) 설치하기, 한글]
 
 <hr>
-최종갱신일 : 2014년 3월 8일 오전 8:20 현재
+최종갱신일 : 2014년 5월 16일
 
 작성자 : 최효성
