@@ -1,4 +1,4 @@
-## Git 소개
+# Git 소개
 
 여러가지 소스코드관리(SCM, Source Code Management) 툴이 있지만 레일스에서 일반적으로 `Git`을 주로 사용한다.
 
