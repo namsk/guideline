@@ -30,7 +30,6 @@
 
 ```
 # yum -y update
-# yum -y groupinstall "Development Tools"
 ```
 
 Sudo 패키지 설치
