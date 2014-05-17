@@ -25,8 +25,11 @@
     * [posts 컨트롤러 변경](contents/walkthrough/posts_controller_modified.md)
     * [posts 뷰 변경](contents/walkthrough/posts_view_file.md)
     * [게시판 레이아웃 작성하기](contents/walkthrough/bulletin_type.md)
+    * [갤러리형 레이아웃 작성하기](contents/walkthrough/gallery_layout.md)
 * [프로젝트 배포하기](deployment/first.md)
 * [부록](appendices/appendix.md)
+    * [ImageMagick 설치하기](appendices/imagemagick.md)
     * [추천 웹사이트 및 블로그](appendices/blogs.md)
     * [추천도서](appendices/books.md)
     * [추천동영상](appendices/screencasts.md)
+

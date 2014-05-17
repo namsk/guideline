@@ -6,12 +6,25 @@
 
 ## 개발환경
 
-* [rails v 4.1.0](http://weblog.rubyonrails.org/2014/4/8/Rails-4-1/) : 2014년 4월 8일 릴리스됨.
-* [ruby v 2.1.1](https://www.ruby-lang.org/ko/news/2014/02/24/ruby-2-1-1-is-released/) : 2014년 2월 24일 릴리스됨.
+* [ruby v 2.1.2](https://www.ruby-lang.org/ko/news/2014/05/09/ruby-2-1-2-is-released/) : 2014년 2월 24일 릴리스됨.
+* [rails v 4.1.1](http://weblog.rubyonrails.org/2014/5/6/Rails_3_2_18_4_0_5_and_4_1_1_have_been_released/) : 2014년 5월 6일 릴리스됨.
+
+
+## 소스 코드
+
+로컬 머신에 `git`이 설치되어 있는 상태에서 아래와 같이 소스를 받을 수 있다.
+
+```sh
+$ git clone https://github.com/rorlab/rcafe.git
+```
 
 ## 주요기능
 
-* 회원가입
+* 회원가입(회원인증 및 권한설정)
+* 공지사항/새소식/가입인사 게시판 기능
+* 댓글기능
+* 태그기능
+* 파일 업로드기능
 * 관리자기능
   * 게시판관리
   * 회원관리
