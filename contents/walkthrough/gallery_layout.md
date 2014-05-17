@@ -267,7 +267,21 @@ end
 
 이제 `.jpg`, `.jpeg`, `.gif`, `.png`, `.pdf` 확장자를 가진 파일만 업로드할 수 있게 된다.
 
+이러한 파일확장자 이외의 파일을 업로드하면 아래와 같은 에러 메시지가 표시된다.
 
-![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/2014-05-17_16-00-09_zps29ff9da5.png)
+![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/2014-05-17_21-25-04_zps0d9549a7.png)
 
+`.pdf` 파일을 업로드하면 첫페이지의 이미지가 쎔네일로 만들어진다.
+
+![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/rcafe/2014-05-17_16-00-09_zps7a9c5c52.png)
+
+각 게시판형에 따른 레이아웃용 `partial` 템플릿 파일에서 헤더 부분에 아래와 같이 추가하여 게시판 제목 옆에 `설정` 링크를 두면 좋겠다. (`_bulletin.html.erb`, `_blog.html.erb`, `_gallery.html.erb`)
+
+```erb
+<h2><%= params[:bulletin_id] %> <small><%= link_to '설정', edit_bulletin_path(params[:bulletin_id])%></small></h2>
+```
+
+![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/rcafe/2014-05-17_21-44-58_zps72421953.png)
+
+> **Info** 소스코드 : [fdf06bdac33daf2a80e73e7733cb57f03e78280e](https://github.com/RORLabGitBook/guideline/tree/fdf06bdac33daf2a80e73e7733cb57f03e78280e)
 
