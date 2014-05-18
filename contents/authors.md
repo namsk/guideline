@@ -7,6 +7,8 @@
 
 * [남승균](https://github.com/namsk)
 * [손영채](https://github.com/ptjoker95)
+* [신재훈](https://github.com/ShinJaehun)
+* [유상민](https://github.com/neocoin)
 * [정창훈](https://github.com/namsk)
 * [최효성](https://github.com/rorlab)
 
