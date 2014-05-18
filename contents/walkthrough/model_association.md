@@ -18,19 +18,19 @@ end
 
 [주의사항]
 
-> 두 모델간의 관계선언을 할 때는 단복수에 주의해야 한다. 위에서와 같이 `has_many` 다음에는 항상 복수형(`posts`)을 지정해야 하고, `belongs_to` 다음에는 항상 단수형(`bulletin`)으로 지정해야 한다.
+> 두 모델 간의 관계선언을 할 때는 단복수에 주의해야 한다. 위에서와같이 `has_many` 다음에는 항상 복수형(`posts`)을 지정해야 하고, `belongs_to` 다음에는 항상 단수형(`bulletin`)으로 지정해야 한다.
 
 관계선언을 하는 [매크로 스타일의 클래스 메소드](http://stackoverflow.com/a/926655)인 `has_many`와 `belongs_to`는 매우 직관적이어서 별도의 설명이 필요치 않다. 단, `has_many`의 경우 `dependent` 옵션을 지정할 수 있는데, `:destroy`로 지정할 경우, 특정 `bulletin` 레코드를 삭제할 때 이 게시판에 속하는 모든 `posts`도 동시에 삭제된다.
 
 [주의사항]
 
->단, 이와 같이 두 모델의 관계를 선언하는 것만으로 실제 DB 테이블이 자동으로 연결되지 않는다. 즉, 관계형 데이터베이스에서 두 테이블이 관계를 가지기 위해서는 자식 테이블 필드 중에 부모 테이블의 `id`를 외래키(foreign key)로 가지고 있어야 한다.
+> 단, 이와 같이 두 모델의 관계를 선언하는 것만으로 실제 DB 테이블이 자동으로 연결되지 않는다. 즉, 관계형 데이터베이스에서 두 테이블이 관계를 가지기 위해서는 자식 테이블 필드 중에 부모 테이블의 `id`를 외래키(foreign key)로 가지고 있어야 한다.
 
 실제 이 두 모델이 액티브레코드를 통해서 연결되는 각각의 테이블을 물리적으로 연결하기 위해서는 `posts` 테이블에 `bulletin_id`(모델명 + 'id')이란 정수형의 필드를 추가해 주어야 한다.
 
 [주의사항]
 
->레일스의 모든 모델 클래스는 각각의 해당 테이블의 `primary key`가 `id`인 것으로 가정한다. 이것은 레일스의 규칙이다. 물론 `id` 이외의 다른 키를 `primary key`로 사용할 수 있지만, 부가적인 작업을 더 해주어야 하기 때문에 매우 불편하다. 따라서 레일스 나라에서 살려면 레일스의 법을 준수할 필요가 있는 것이다.
+> 레일스의 모든 모델 클래스는 각각의 해당 테이블의 `primary key`가 `id`인 것으로 가정한다. 이것은 레일스의 규칙이다. 물론 `id` 이외의 다른 키를 `primary key`로 사용할 수 있지만, 부가적인 작업을 더 해주어야 하기 때문에 매우 불편하다. 따라서 레일스 나라에서 살려면 레일스의 법을 준수할 필요가 있는 것이다.
 
 이번에는 `posts` 테이블에 `bulletin_id` 필드를 추가하기 위해 마이그레이션 파일을 작성해 보자.
 
@@ -71,7 +71,7 @@ $ bin/rake db:migrate
 
 ```
 $ bin/rails console
-Loading development environment (Rails 4.1.0)
+Loading development environment (Rails 4.1.1)
 irb(main):001:0> bulletin = Bulletin.new
 => #<Bulletin id: nil, title: nil, description: nil, created_at: nil, updated_at: nil>
 ```
@@ -98,7 +98,7 @@ bulletin.post_ids   bulletin.post_ids=  bulletin.posts      bulletin.posts=
 
 ```
 $ bin/rails console
-Loading development environment (Rails 4.1.0)
+Loading development environment (Rails 4.1.1)
 irb(main):001:0> bulletin = Bulletin.create title:"공지사항"
    (0.1ms)  begin transaction
   SQL (0.4ms)  INSERT INTO "bulletins" ("created_at", "title", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-04 09:05:25.688974"], ["title", "공지사항"], ["updated_at", "2014-05-04 09:05:25.688974"]]
@@ -156,11 +156,4 @@ irb(main):014:0> bulletin.posts.size
 => 2
 ```
 
-즉, `bulletin.posts.create`와 같이 `post`를 생성하면 생성되는 `post` 객체의 `bulletin_id` 속성이 `bulletin.id` 값으로 자동으로 지정되기 때문에, `post.bulletin_id=`에 `bulletin.id` 값을 할당하는 과정이 필요없게 된다.
-
-
-
-
-
-
-
+즉, `bulletin.posts.create`와 같이 `post`를 생성하면 생성되는 `post` 객체의 `bulletin_id` 속성이 `bulletin.id` 값으로 자동으로 지정되기 때문에, `post.bulletin_id=`에 `bulletin.id` 값을 할당하는 과정이 필요 없게 된다.

@@ -60,7 +60,7 @@ $ open http://localhost:3000/bulletins
 
 ## 타임존(Timezone)
 
-[게시판 보기] 화면캡쳐에서 `Created at`(생성일) 값을 보면 `2014-05-03 08:59:18 UTC`와 같다. 레일스의 디폴트 타이존 변경은  `config/application.rb` 파일에서 할 수 있다.
+[게시판 보기] 화면캡쳐에서 `Created at`(생성일) 값을 보면 `2014-05-03 08:59:18 UTC`와 같다. 레일스의 디폴트 타임존 변경은  `config/application.rb` 파일에서 할 수 있다.
 
 ```
 ... 중략~

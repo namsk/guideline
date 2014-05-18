@@ -6,7 +6,7 @@
 
 ## 개발환경
 
-* [ruby v 2.1.2](https://www.ruby-lang.org/ko/news/2014/05/09/ruby-2-1-2-is-released/) : 2014년 2월 24일 릴리스됨.
+* [ruby v 2.1.2](https://www.ruby-lang.org/ko/news/2014/05/09/ruby-2-1-2-is-released/) : 2014년 5월 9일 릴리스됨.
 * [rails v 4.1.1](http://weblog.rubyonrails.org/2014/5/6/Rails_3_2_18_4_0_5_and_4_1_1_have_been_released/) : 2014년 5월 6일 릴리스됨.
 
 
@@ -136,13 +136,13 @@ $ rails new rcafe
 ```
 $ bin/rails server
 => Booting WEBrick
-=> Rails 4.1.0 application starting in development on http://0.0.0.0:3000
+=> Rails 4.1.1 application starting in development on http://0.0.0.0:3000
 => Run `rails server -h` for more startup options
 => Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
 => Ctrl-C to shutdown server
-[2014-04-30 10:45:25] INFO  WEBrick 1.3.1
-[2014-04-30 10:45:25] INFO  ruby 2.1.1 (2014-02-24) [x86_64-darwin13.0]
-[2014-04-30 10:45:25] INFO  WEBrick::HTTPServer#start: pid=23779 port=3000
+[2014-05-17 12:26:38] INFO  WEBrick 1.3.1
+[2014-05-17 12:26:38] INFO  ruby 2.1.2 (2014-05-08) [x86_64-darwin13.0]
+[2014-05-17 12:26:38] INFO  WEBrick::HTTPServer#start: pid=65766 port=3000
 ```
 
 `Booting WEBrick` : 레일스 프로젝트의 실행하기 위해 로컬 웹서버(WEBrick)를 부팅한다는 것을 표시한다.
