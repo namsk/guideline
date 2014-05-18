@@ -11,6 +11,7 @@
 * [유상민](https://github.com/neocoin)
 * [정창훈](https://github.com/namsk)
 * [최효성](https://github.com/rorlab)
+* [Shim Tw](https://github.com/marocchino)
 
 (가나다순)
 
