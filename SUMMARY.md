@@ -29,6 +29,7 @@
     * [flash 메시지 표시하기](contents/walkthrough/flash_message.md)
 * [프로젝트 배포하기](deployment/first.md)
 * [부록](appendices/appendix.md)
+    * [공동집필에 참여하기](appendices/collaboration.md)
     * [액티브레코드란?](appendices/active_record.md)
     * [ImageMagick 설치하기](appendices/imagemagick.md)
     * [추천 웹사이트 및 블로그](appendices/blogs.md)
