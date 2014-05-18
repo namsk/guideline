@@ -87,7 +87,7 @@ end
 지금까지 레일스의 `flash` 메시지를 표시하는 방법을 소개했다.
 
 
-
+> **Info** Github 소스코드 [application.html.erb](https://github.com/rorlab/rcafe/blob/04aadb879999582ae0c6f56d5905ae963aec9c43/app/views/layouts/application.html.erb)
 
 
 
