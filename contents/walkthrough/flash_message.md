@@ -4,7 +4,7 @@
 
 레일스에서는 대게 이러한 `flash` 메시지를 어플리케이션 레이아웃의 `body` 태그내 최상단에 위치시킨다.
 
-```erb
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +34,7 @@ redirect_to ..., notice: 'Post was successfully created.'
 위에서 언급한 바와 같이 이 메시지는 어플리케이션 레이아웃 템플릿(`application.html.erb`)에 `partial`로 삽입하기로 한다.
 
 
-```erb
+```html
 <div class="container">
 
   <%= render partial: "shared/flash_messages", flash: flash %>
@@ -46,7 +46,7 @@ redirect_to ..., notice: 'Post was successfully created.'
 
 그리고 `app/views/shared` 디렉토리에 `_flash_message.html.erb`라는 `partial` 템플릿 파일을 추가하고 아래와 같이 작성한다.
 
-```erb
+```html
 <% flash.each do |type, message| %>
   <div class="alert <%= bootstrap_class_for(type) %> alert-dismissable fade in">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
