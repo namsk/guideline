@@ -7,7 +7,7 @@
 
 ## 맥 OS X
 
-맥에서는 [Homebrew](http://brew.sh/) 패키지 매니저를 이용하면 `rbenv`과 `ruby-build`를 쉽게 설치할 수 있다.
+맥에서는 [Homebrew](http://brew.sh/) 패키지 매니저를 이용하면 `rbenv`과 `ruby-build`를 쉽게 설치할 수 있다.
 
 Homebrew는 한줄의 명령어로 설치 가능한데 해당 명령어는 계속 변경되기 때문에 문서에 언급하지 않는다. http://brew.sh 하단의 Install Homebrew를 참고.
 
@@ -20,7 +20,69 @@ $ brew install rbenv ruby-build
 
 ## 리눅스
 
-(누구라도 작성할 수 있음)
+리눅스 환경에서 루비의 버전 관리를 도와주는 `rbenv`를 설치해보자. 먼저 우분투를 비롯한 데비안 기반 리눅스에서 `rbenv`를 설치하는 방법을 소개한다.
+
+[`github`](https://github.com)에서 `rbenv`를 받아온다. git 명령으로 `github`의 `rbenv` 프로젝트를 [사용자 홈 디렉토리]/.rbenv에 클론한다.
+
+```sh
+$ git clone git://github.com/sstephenson/rbenv.git .rbenv
+```
+
+명령 프롬프트에서 `rbenv`를 실행할 수 있게 쉘 환경변수를 수정한다. .bashrc 파일을 읽어들일 수 있도록 편집기를 열어서 .bash_profile에 다음과 같이 추가한다.
+
+```sh
+[ -f "$HOME/.profile" ] && source "$HOME/.profile"
+[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+```
+
+.bashrc 내용은 다음과 같이 작성한다. `rbenv`가 저장된 디렉토리를 RBENV_ROOT 환경 변수에, `rbenv` 실행 파일이 들어 있는 디렉토리를 PATH에 추가한다. 쉘을 실행할때마다 'rbenv init -' 명령을 실행한다.
+
+```sh
+export RBENV_ROOT="${HOME}/.rbenv"
+if [ -d "${RBENV_ROOT}" ]; then
+  export PATH="${RBENV_ROOT}/bin:${PATH}"
+  eval "$(rbenv init -)"
+fi
+```
+
+루비를 설치하기 위해서는 `rbenv`의 플러그인 `ruby-build`가 필요하다. .rbenv/plugins 디렉토리를 생성하고 `github`에서 `ruby-build`를 받아온다.
+
+```sh
+$ mkdir -p ~/.rbenv/plugins
+$ cd ~/.rbenv/plugins
+$ git clone git://github.com/sstephenson/ruby-build.git
+```
+
+install 옵션을 사용해서 루비를 설치해보자. 2.0.0-p451 버전을 설치했다.
+
+```sh
+$ rbenv install 2.0.0-p451
+```
+
+rehash 옵션은 새로운 환경을 재설정하는 옵션으로 새로 루비를 설치하거나 루비 젬을 설치한 다음 반드시 실행해야 한다.
+
+```sh
+$ rbenv rehash
+```
+global 옵션은 전역 설정을 변경하는 옵션으로 시스템에서 해당 버전의 루비를 사용하기 위해 사용한다.
+
+```sh
+$ rbenv global 2.0.0-p451
+```
+
+설치하고자 했던 루비 버전이 제대로 설치되었는지 확인해보자.
+
+```sh
+$ ruby -v
+ruby 2.0.0p451 (2014-02-24 revision 45167) [x86_64-linux]
+```
+
+루비 설치가 끝났으면 루비 젬을 관리하기 위해 bundler를 설치한다. 새로운 환경을 재설정하기 위해 rehash를 잊지 말자.
+
+```sh
+$ gem install bundler
+$ rbenv rehash
+```
 
 ## 윈도우
 
