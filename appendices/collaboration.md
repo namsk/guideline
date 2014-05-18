@@ -37,7 +37,7 @@ $ cd rcafe
 
 ## 문서작업
 
-gitbook editor를 실행한 후 방금 전에 clone 받은 폴더를 열고 문서작업을 한다.
+[GitBook Editor](https://github.com/GitbookIO/editor)를 실행한 후 방금 전에 clone 받은 폴더를 열고 문서작업을 한다.
 
 ## 작업내용 확인
 
