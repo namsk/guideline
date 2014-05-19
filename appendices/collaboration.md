@@ -50,7 +50,7 @@ $ cd rcafe
 > **Info** 이때 아래와 같은 에러가 발생하면, `$ ulimit -n 1200` 명령을 실행한 후 다시 실행하면 된다. ([참고문서](https://github.com/GitbookIO/gitbook/issues/214))
 
 ```bash
-gitbook serve
+$ gitbook serve
 Press CTRL+C to quit ...
 
 Starting build ...
