@@ -8,12 +8,16 @@
 * [남승균](https://github.com/namsk)
 * [손영채](https://github.com/ptjoker95)
 * [신재훈](https://github.com/ShinJaehun)
-* [유상민](https://github.com/neocoin)
+
 * [정창훈](https://github.com/namsk)
 * [최효성](https://github.com/rorlab)
 * [Shim Tw](https://github.com/marocchino)
 
-(가나다순)
+**기여자**
+
+* [유상민](https://github.com/neocoin)
+
+(가나다 ABC 순)
 
 > **info** 공동집필자로 등록 후 활동을 원하시는 분은 연락([rorlab@gmail.com](mailto:rorlab@gmail.com))을 주시기 바랍니다.
 
