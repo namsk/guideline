@@ -7,7 +7,7 @@
 
 ## 맥 OS X
 
-맥에서는 [Homebrew](http://brew.sh/) 패키지 매니저를 이용하면 `rbenv`과 `ruby-build`를 쉽게 설치할 수 있다.
+맥에서는 [Homebrew](http://brew.sh/) 패키지 매니저를 이용하면 `rbenv`과 `ruby-build`를 쉽게 설치할 수 있다.
 
 Homebrew는 한줄의 명령어로 설치 가능한데 해당 명령어는 계속 변경되기 때문에 문서에 언급하지 않는다. http://brew.sh 하단의 Install Homebrew를 참고.
 
@@ -86,4 +86,7 @@ $ rbenv rehash
 
 ## 윈도우
 
-(누구라도 작성할 수 있음)
+윈도우에서는 `rbenv`을 사용할 수 없다. 관련 문서에 의하면, 대신에 [RubyInstaller](http://misheska.com/blog/2013/06/15/using-rbenv-to-manage-multiple-versions-of-ruby/) 또는 [Pik](https://github.com/vertiginous/pik)를 사용할 것을 권한다.
+
+
+> **Note** [Mischa Taylor's Coding Blog](http://misheska.com/blog/2013/06/15/using-rbenv-to-manage-multiple-versions-of-ruby/) : Rbenv is supported on Linux and Mac OS X. Rbenv doesn’t work on Windows (and isn’t really necessary on Windows as there is no system Ruby on Windows). On Windows, the RubyInstaller and/or Pik are both good alternatives to work with multiple versions of Ruby on the same box.
