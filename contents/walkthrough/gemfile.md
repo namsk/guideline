@@ -4,15 +4,17 @@
 
 ## Bundler 설치하기
 
-레일스는 `젬`의 의존성 관리를 위해 [`Bundler`](http://bundler.io/)를 이용한다. `Bundler`는  `젬` 의존성 관리를 쉽게해주는 프로그램으로 레일스에서 사용하는 `젬`을 다운로드 받아서 사용할수 있게 하는 역할을 한다. 위에서 언급한 `Gemfile`이 Bundler에서 사용하는 `젬` 의존성 정의 파일이고 `Gemfile`에 정의된 `젬`들의 의존성을 파악해서 올바른 `젬`을 사용할 수 있도록 하는 명령어는 `bundle`이다.
+레일스는 `젬`의 의존성 관리를 위해 [`Bundler`](http://bundler.io/)를 이용한다.
 
-Bundler 설치는 다음의 명령어로 가능하다. `rbenv`을 사용하는경우 Bundler 설치후 `rbenv rehash`를 잊어버리면 안된다.
+`Bundler`는  `젬` 의존성 관리를 쉽게해주는 프로그램으로 레일스에서 사용하는 `젬`을 다운로드 받아서 사용할수 있게 하는 역할을 한다. 위에서 언급한 `Gemfile`이 `Bundler`에서 사용하는 `젬` 의존성 정의 파일이고 `Gemfile`에 정의된 `젬`들의 의존성을 파악해서 올바른 `젬`을 사용할 수 있도록 하는 명령어는 `bundle`이다.
+
+`Bundler` 설치는 다음의 명령어로 가능하다. `rbenv`을 사용하는 경우 `Bundler` 설치후 `rbenv rehash`를 잊어서는 안된다.
 
 ```sh
 gem install bundler
 ```
 
-이제부터 Gemfile 이 있는곳에서 `bundle install` 명령어를 실행하면 `Gemfile`에 명시된 `젬`을 사용할 수 있게된다.
+이제부터 `Gemfile` 이 있는 곳에서 `bundle install` 명령어를 실행하면 `Gemfile`에 명시된 `젬`을 사용할 수 있게된다.
 
 ## 사용할 젬 소개
 
