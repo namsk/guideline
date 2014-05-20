@@ -12,6 +12,7 @@
 
 ## 유익한 Git 공부 자료
 
+* [Git Cheat Sheet](https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf)
 * [git - 간편 안내서](http://rogerdudler.github.io/git-guide/index.ko.html)
 * [GIT-IMMERSION](http://gitimmersion.com)
 * [Try Git](https://www.codeschool.com/courses/try-git)
