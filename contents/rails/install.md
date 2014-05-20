@@ -8,3 +8,4 @@
 * 매뉴얼 설치
   * [맥 OSX 개발머신에 설치하기](mac_install.html)
   * [리눅스 개발머신에 설치하기](linux_install.html)
+  * [윈도우즈 개발머신에 설치하기](window_install.html)

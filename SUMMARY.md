@@ -13,6 +13,7 @@
     * [인스톨러를 이용한 설치](contents/rails/using_installer.md)
     * [맥 OSX 개발머신에 설치하기](contents/rails/mac_install.md)
     * [리눅스 개발머신에 설치하기](contents/rails/linux_install.md)
+    * [윈도우 개발머신에 설치하기](contents/rails/windows_install.md)
 * [프로젝트 따라하기](contents/walkthrough/start.md)
     * [Gemfile의 작성](contents/walkthrough/gemfile.md)
     * [welcome 컨트롤러의 생성](contents/walkthrough/welcome_controller.md)
