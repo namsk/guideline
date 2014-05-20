@@ -1,12 +1,12 @@
 # Post 모델 CRUD 살펴보기
 
-`scaffold` 제너레이터를 이용하여 특정 모델 리소스를 생성하면 기본적으로 `index`, `show`, `create`, `update`, `destroy`, `new`, `edit` 등 7개의 컨트롤러 액션이 생성된다.
+`scaffold` 제너레이터를 이용하여 특정 모델 리소스를 생성하면 기본적으로 `create`, `index`, `show`, `update`, `destroy`, `new`, `edit` 등 7개의 컨트롤러 액션이 생성된다.
 
 [참고사항]
 
-> 제너레이터의 종류를 보기 싶은 경우에는 콘솔에서 bin/rails generate 명령을 실행하면 된다. 결과에서 Rails: scaffold 를 찾아 볼 수 있을 것이다.
+> 제너레이터의 종류를 보고 싶은 경우에는 콘솔에서 bin/rails generate 명령을 실행하면 된다. 결과에서 Rails: scaffold 를 찾아 볼 수 있을 것이다.
 
-데이터의 생성, 읽기, 업데이트, 삭제가 위의 5개의 액션(`index`, `show`, `create`, `update`, `destroy`)으로 구현된다.
+데이터의 생성, 읽기, 업데이트, 삭제가 위의 5개의 액션(`create`, `index`, `show`, `update`, `destroy`)으로 구현된다.
 
 | 모델작업 | 액션 |
 | -- | -- |
@@ -18,7 +18,7 @@
 
 # 기본 액션들
 
-7개의 액션 중 나머지 두개, `new`와 `edit` 액션은 데이터 조작을 하지 않고 단지 뷰만 렌더링하는 기능을 가진다.
+7개의 액션 중 나머지 두개, `new`와 `edit` 액션은 데이터 조작을 하지 않고 단지 뷰를 렌더링하는 기능만을 가진다.
 
 ## index 액션
 
@@ -61,6 +61,8 @@ DB 쿼리후, 특정 모델의 특정 객체(들)를 삭제한다.
 
 
 ## posts 컨트롤러
+
+app/controllers/post_controller.rb 파일
 
 ```
 class PostsController < ApplicationController
@@ -164,7 +166,7 @@ private
 
 ## Strong Parameters
 
-레일스 3에서는 mass assignment에 대한 화이트리스트를 해당 모델 클래스에서 `attr_accesible` 매크로를 작성였다.
+레일스 3에서는 mass assignment에 대한 화이트리스트를 해당 모델 클래스에서 `attr_accesible` 매크로로 작성하였다.
 
 ```
 class User < ActiveRecord::Base
@@ -172,7 +174,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-즉, `User` 모델의 `first`, `last`, `email` 속성만이 [mass assignment](http://code.tutsplus.com/tutorials/mass-assignment-rails-and-you--net-31695)로 저장할 수 있다는 것이다.
+즉, `User` 모델의 `first`, `last`, `email` 속성만을 [mass assignment](http://code.tutsplus.com/tutorials/mass-assignment-rails-and-you--net-31695)로 저장할 수 있다는 것이다.
 
 그러나 레일스 4로 업그레이드되면서 이러한 속성 보안관련 기능이 모델로부터 컨트롤러로 이동하여 [Strong Parameters](http://richonrails.com/articles/rails-4-preview-strong-parameters)의 개념으로 재구성되었다.
 
@@ -185,7 +187,7 @@ private
   end
 ```
 
-즉, 파라미터로 넘겨 받은 속성 중에 `title`과 `content`만 화이트리스트로 인정하겠다는 뜻이다. 따라서 다른 속성은 `save` 또는 `udpate` 되지 않게 된다.
+즉, 파라미터로 넘겨 받은 속성 중에 `title`과 `content`만을 화이트리스트로 인정하겠다는 뜻이다. 따라서 다른 속성은 `save` 또는 `udpate` 되지 않게 된다.
 
 
 
