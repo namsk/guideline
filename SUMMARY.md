@@ -28,6 +28,7 @@
     * [게시판 레이아웃 작성하기](contents/walkthrough/bulletin_type.md)
     * [갤러리형 레이아웃 작성하기](contents/walkthrough/gallery_layout.md)
     * [flash 메시지 표시하기](contents/walkthrough/flash_message.md)
+    * [기본 데이터 추가하기](contents/walkthrough/rake_seed.md)
 * [프로젝트 배포하기](deployment/first.md)
     * [Capistrano 설치](deployment/capfile.md)
     * [deploy.rb 설정](deployment/deployrb.md)
