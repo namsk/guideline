@@ -26,5 +26,6 @@ $ bundle exec cap install
     └── capistrano
             └── tasks
 ```
+프로젝트 루트폴더에 생성된 Capfile에서 추가적으로 사용하고자 하는 플러그인이나 Rake task를 등록하면 기본 설치는 끝난다.
 
 > **참고사이트** [github.com: capistrano/capistrano ](https://github.com/capistrano/capistrano)
