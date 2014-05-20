@@ -3,14 +3,16 @@
 `posts` 테이블의 글을 게시판별로 분류하기 위해서는 `Bulletin` 모델과 `Post` 모델 사이에 일대다의 관계선언을 해 줄 필요가 있다.
 
 `app/models/bulletin.rb` 파일을 열고 아래와 같이 추가한다.
-```
+
+```ruby
 class Bulletin < ActiveRecord::Base
   has_many :posts, dependent: :destroy
 end
 ```
 
 `app/models/post.rb` 파일을 열고 아래와 같이 추가한다.
-```
+
+```ruby
 class Post < ActiveRecord::Base
   belongs_to :bulletin
 end
@@ -34,7 +36,7 @@ end
 
 이번에는 `posts` 테이블에 `bulletin_id` 필드를 추가하기 위해 마이그레이션 파일을 작성해 보자.
 
-```
+```bash
 $ bin/rails g migration AddBulletinIdToPosts bulletin_id:integer:index bulletin_id:integer:index
       invoke  active_record
       create    db/migrate/20140509005154_add_bulletin_id_to_posts.rb
@@ -44,7 +46,7 @@ $ bin/rails g migration AddBulletinIdToPosts bulletin_id:integer:index bulletin_
 
 생성된 마이그레이션 파일(`db/migrate/20140509005154_add_bulletin_id_to_posts.rb`)은 아래와 같다.
 
-```
+```ruby
 class AddBulletinIdToPosts < ActiveRecord::Migration
   def change
     add_column :posts, :bulletin_id, :integer
@@ -55,7 +57,7 @@ end
 
 이 마이그레이션 파일에 대해서 `db:migrate` 작업을 한다.
 
-```
+```bash
 $ bin/rake db:migrate
 == 20140509005154 AddBulletinIdToPosts: migrating =============================
 -- add_column(:posts, :bulletin_id, :integer)
@@ -69,7 +71,7 @@ $ bin/rake db:migrate
 
 지금까지 작업한 것이 제대로 동작하는지를 확인하기 위해서 터미널에서 아래와 같이 레일스 콘솔을 실행해 보자.
 
-```
+```bash
 $ bin/rails console
 Loading development environment (Rails 4.1.1)
 irb(main):001:0> bulletin = Bulletin.new
@@ -78,7 +80,7 @@ irb(main):001:0> bulletin = Bulletin.new
 
 그리고 `bulletin.post`까지 입력한 후 `<tab>` 키를 눌러보면 사용할 수 있는 메소드들을 볼 수 있다.
 
-```
+```bash
 irb(main):002:0> bulletin.post
 bulletin.post_ids   bulletin.post_ids=  bulletin.posts      bulletin.posts=
 ```
@@ -96,7 +98,7 @@ bulletin.post_ids   bulletin.post_ids=  bulletin.posts      bulletin.posts=
 
 특정 게시판에 하나의 글을 추가한다고 가정해 보자. 우선,  `공지사항`이라는 `bulletin` 객체를 하나 생성하자.
 
-```
+```bash
 $ bin/rails console
 Loading development environment (Rails 4.1.1)
 irb(main):001:0> bulletin = Bulletin.create title:"공지사항"
@@ -108,7 +110,7 @@ irb(main):001:0> bulletin = Bulletin.create title:"공지사항"
 
 그리고 `post` 객체도 하나 생성하자.
 
-```
+```bash
 irb(main):003:0> post = Post.create title:"레일스 가이드라인 책 집필", content:"초보자를 위한 레일스   (0.0ms)  begin transaction
   SQL (0.2ms)  INSERT INTO "posts" ("content", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["content", "초보자를 위한 레일스 가이드라인"], ["created_at", "2014-05-04 09:06:54.879852"], ["title", "레일스 가이드라인 책 집필"], ["updated_at", "2014-05-04 09:06:54.879852"]]
    (1.3ms)  commit transaction
@@ -118,14 +120,14 @@ irb(main):003:0> post = Post.create title:"레일스 가이드라인 책 집필"
 현재는 `post.bulletin_id` 값이 `nil`이기 때문에,
 `post` 객체와 `bulletin` 객체가 물리적으로 연결되지 않은 상태이다.
 
-```
+```bash
 irb(main):004:0> post.bulletin_id
 => nil
 ```
 
 이 문제를 해결하기 위해서 `post.bulletin_id=` 메소드에 `bulletin.id` 값을 할당한다.
 
-```
+```bash
 irb(main):005:0> bulletin.id
 => 4
 irb(main):006:0> post.bulletin_id = bulletin.id
@@ -134,7 +136,7 @@ irb(main):006:0> post.bulletin_id = bulletin.id
 
 이제 아래와 같이 두 모델의 관계선언이 제대로 설정되었는지를 확인해 보자.
 
-```
+```bash
 irb(main):010:0> bulletin.posts
   Post Load (0.2ms)  SELECT "posts".* FROM "posts"  WHERE "posts"."bulletin_id" = ?  [["bulletin_id", 4]]
 => #<ActiveRecord::Associations::CollectionProxy [#<Post id: 2, title: "레일스 가이드라인 책 집필", content: "초보자를 위한 레일스 가이드라인", created_at: "2014-05-04 09:06:54", updated_at: "2014-05-04 09:08:18", bulletin_id: 4>]>
@@ -144,7 +146,7 @@ irb(main):010:0> bulletin.posts
 
 두 모델 클래스에서 관계선언을 한 경우에는 이러한 과정을 간단하게 해 줄 수 있다.
 
-```
+```bash
 irb(main):011:0> post = bulletin.posts.create title:"두번째 글", content: "관계선언을 이용하여 글을 등록합니다"
    (0.1ms)  begin transaction
   SQL (0.3ms)  INSERT INTO "posts" ("bulletin_id", "content", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["bulletin_id", 4], ["content", "관계선언을 이용하여 글을 등록합니다"], ["created_at", "2014-05-04 09:20:18.328327"], ["title", "두번째 글"], ["updated_at", "2014-05-04 09:20:18.328327"]]

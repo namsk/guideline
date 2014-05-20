@@ -10,7 +10,7 @@
 
 게시판을 새로 추가할 때, 레이아웃를 지정하기 위해서 `post_type`이라는 속성을 추가하기로 한다. 이 속성은 `string` 속성을 가지는 것으로 하고, `bulletin`, `blog`, `gallery` 값을 가질 수 있다. 이를 위해서 `Bulletin` 모델에 속성을 추가하는 마이그레이션 파일을 생성한다.
 
-```
+```bash
 $ bin/rails g migration add_post_type_to_bulletins post_type
       invoke  active_record
       create    db/migrate/20140513063455_add_post_type_to_bulletins.rb
@@ -18,7 +18,7 @@ $ bin/rails g migration add_post_type_to_bulletins post_type
 
 그리고 방금 전에 생성된 마이그레이션 파일을 열어 아래와 같이 `post_type`의 디폴트 값을 `bulletin`으로 추가하고,
 
-```
+```ruby
 class AddPostTypeToBulletins < ActiveRecord::Migration
   def change
     add_column :bulletins, :post_type, :string, default: 'bulletin'
@@ -28,7 +28,7 @@ end
 
 저장한 후 `db:migrate` 작업을 한다.
 
-```
+```bash
 $ bin/rake db:migrate
 == 20140513063455 AddPostTypeToBulletins: migrating ===========================
 -- add_column(:bulletins, :post_type, :string, {:default=>"bulletin"})
@@ -40,7 +40,7 @@ $ bin/rake db:migrate
 
 `bulletins_controller.rb` 파일의 열어 하단에 있는 `bulletin_params` 메소드에 아래와 같이 `post_type` 속성을 추가한다.
 
-```
+```ruby
 def bulletin_params
   params.require(:bulletin).permit(:title, :description, :post_type)
 end
@@ -50,7 +50,7 @@ end
 
 `app/views/bulletins/_form.html.erb` 파일을 열어 아래의 코드를 추가해 준다.
 
-```
+```html
 <div class="form-group">
   <%= f.input :post_type, collection: [ ['게시판', 'bulletin'], ['블로그', 'blog']], input_html:{ class:'form-control'} %>
 </div>
@@ -60,7 +60,7 @@ end
 
 `app/views/bulletins/show.html.erb` 파일을 열어 아래의 코드를 추가해 준다.
 
-```
+```html
 <tr>
   <th>Post Type</th>
   <td><%= @bulletin.post_type %></td>
@@ -75,7 +75,7 @@ end
 
 이제 `posts` 컨트롤러의 `index` 액션 뷰 파일의 모든 내용을 `_bulletin.html.erb` 파일로 옮기고, `index` 뷰 파일은 아래와 같이 수정하자.
 
-```
+```ruby
 <%= render "posts/post_types/#{@bulletin.post_type}" %>
 ```
 
@@ -87,7 +87,7 @@ end
 
 `_blog.html.erb` 파일의 내용을 아래와 같이 작성한다.
 
-```
+```html
 <h2><%= params[:bulletin_id] %></h2>
 
 <% @posts.each do | post | %>
@@ -118,7 +118,7 @@ end
 위와 같이 보이게 하기 위해서의 약간의 작업을 추가로 해 주어야 한다.
 우선 `CSS` 클래스 `post`, `title`, `content`를 `app/assets/stylesheets/posts.css.scss` 파일에 작성해 준다.
 
-```
+```css
 @import 'bootstrap/variables';
 
 .post {
@@ -136,7 +136,7 @@ end
 
 그리고, `app/assets/stylesheets/` 디렉토리에 잇는 `application.css.scss` 파일을 `bootstrap_init.css.scss`로 변경하고, `application.css` 파일을 새로 추가한 후 아래와 같이 작성한다.
 
-```
+```ruby
 /*
 *= require_self
 *= require_tree .

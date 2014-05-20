@@ -2,7 +2,7 @@
 
 때로는 글의 성격에 따라 별도로 관리할 필요가 있다. `게시판`의 개념을 도입하면 원하는 만큼의 게시판을 작성하여 글을 게시판별로 묶을 수 있다. 이를 위해서 `Bulletin`이란 모델을 작성하기로 하자.
 
-```
+```bash
 $ bin/rails g scaffold Bulletin title description:text
       invoke  active_record
       create    db/migrate/20140503084439_create_bulletins.rb
@@ -41,7 +41,7 @@ $ bin/rails g scaffold Bulletin title description:text
 
 DB 마이그레이션 후 브라우저에서 확인해 보자.
 
-```
+```bash
 $ bin/rake db:migrate
 $ open http://localhost:3000/bulletins
 ```
@@ -62,7 +62,7 @@ $ open http://localhost:3000/bulletins
 
 [게시판 보기] 화면캡쳐에서 `Created at`(생성일) 값을 보면 `2014-05-03 08:59:18 UTC`와 같다. 레일스의 디폴트 타임존 변경은  `config/application.rb` 파일에서 할 수 있다.
 
-```
+```ruby
 ... 중략~
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
@@ -72,7 +72,7 @@ $ open http://localhost:3000/bulletins
 
 레일스의 디폴트 타임존은 `UTC`이고, 로컬 타임존 목록을 보기 위해서는 터미널에서 아래와 같이 명령을 실행한다.
 
-```
+```bash
 $ bin/rake -D time
 rake time:zones:all
     Displays all time zones, also available: time:zones:us, time:zones:local -- filter with OFFSET parameter, e.g., OFFSET=-6
@@ -89,7 +89,7 @@ Tokyo
 
 타임존을 `Seoul`로 설정하기 위해서는 아래와 같이 값을 변경하고 로컬 웹서버 다시 시작한다. (config/application.rb)
 
-```
+```ruby
 config.time_zone = 'Seoul'
 ```
 
