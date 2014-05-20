@@ -41,3 +41,7 @@ $ bin/rake db:reset
 ![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/rcafe/2014-05-20_17-31-39_zps9b225561.png)
 
 이제 브라우저에서 확인하여 메뉴항목을 클릭하면 해당 게시판이 에러 없이 보이게 된다.
+
+> **Note** `rcafe` 프로젝트에서는 데이터베이스로 [`sqlite`](http://www.sqlite.org)를 사용한다. 이 데이터베이스는 서버 설정이 필요없는 `serverless` 데이터베이스로 트랜잭션이 가능한 관계형데이터베이스(RDBMS)이다. 따라서 데이터베이스를 생성하는 과정이 필요없지만, 다른 일반적인 `MySQL` 등과 같은 경우는 처음에 `db:create` 작업을 해 주어야 한다.
+
+> SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed SQL database engine in the world. The source code for SQLite is in the public domain.
