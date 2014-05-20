@@ -22,5 +22,5 @@
 
 ## Git GUI 툴
 
-* [SourceTree](http://www.sourcetreeapp.com/) : 윈도우 및 맥용 무료 Git GUI. 강추...^^
+* [SourceTree](http://www.sourcetreeapp.com/) : 윈도우 및 맥용 무료 Git GUI. `git-flow` 기본내장. 강추...^^
 * [Tower](http://www.git-tower.com/) : 맥용 유료($59.00. paypal 가능) Git GUI.
