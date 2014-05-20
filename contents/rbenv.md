@@ -13,7 +13,7 @@ Homebrew는 한줄의 명령어로 설치 가능한데 해당 명령어는 계�
 
 Homebrew를 이용한 `rbenv`, `ruby-build` 설치 방법
 
-```sh
+```bash
 $ brew update
 $ brew install rbenv ruby-build
 ```
@@ -24,20 +24,20 @@ $ brew install rbenv ruby-build
 
 [`github`](https://github.com)에서 `rbenv`를 받아온다. git 명령으로 `github`의 `rbenv` 프로젝트를 [사용자 홈 디렉토리]/.rbenv에 클론한다.
 
-```sh
+```bash
 $ git clone git://github.com/sstephenson/rbenv.git .rbenv
 ```
 
 명령 프롬프트에서 `rbenv`를 실행할 수 있게 쉘 환경변수를 수정한다. .bashrc 파일을 읽어들일 수 있도록 편집기를 열어서 .bash_profile에 다음과 같이 추가한다.
 
-```sh
+```bash
 [ -f "$HOME/.profile" ] && source "$HOME/.profile"
 [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
 ```
 
 .bashrc 내용은 다음과 같이 작성한다. `rbenv`가 저장된 디렉토리를 RBENV_ROOT 환경 변수에, `rbenv` 실행 파일이 들어 있는 디렉토리를 PATH에 추가한다. 쉘을 실행할때마다 'rbenv init -' 명령을 실행한다.
 
-```sh
+```bash
 export RBENV_ROOT="${HOME}/.rbenv"
 if [ -d "${RBENV_ROOT}" ]; then
   export PATH="${RBENV_ROOT}/bin:${PATH}"
@@ -47,7 +47,7 @@ fi
 
 루비를 설치하기 위해서는 `rbenv`의 플러그인 `ruby-build`가 필요하다. .rbenv/plugins 디렉토리를 생성하고 `github`에서 `ruby-build`를 받아온다.
 
-```sh
+```bash
 $ mkdir -p ~/.rbenv/plugins
 $ cd ~/.rbenv/plugins
 $ git clone git://github.com/sstephenson/ruby-build.git
