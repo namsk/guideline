@@ -8,6 +8,7 @@
 * [남승균](https://github.com/namsk)
 * [손영채](https://github.com/ptjoker95)
 * [신재훈](https://github.com/ShinJaehun)
+* [이한결](https://github.com/leehankyeol)
 * [정창훈](https://github.com/seapy)
 * [최효성](https://github.com/rorlab)
 * [Shim Tw](https://github.com/marocchino)
