@@ -2,7 +2,7 @@
 
 프로젝트를 생성할 때 콘솔의 출력 내용에는 아래와 같은 내용을 볼 수 있었을 것이다.
 
-```
+```bash
 $ rails new rcafe
 ...중략~
       create  app/views/layouts/application.html.erb
@@ -13,7 +13,7 @@ $ rails new rcafe
 
 특히 `application.html.erb` 파일은 전체 어플리케이션의 레이아웃을 만들어 주는데, 그 소스코드는 아래와 같다.
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +37,7 @@ $ rails new rcafe
 
 언급한 바와 같이, 어플리케이션 레이아웃은 어플리케이션의 전체 레이아웃을 만들어 준다. 따라서 전체 어플리케이션의 페이지 모습을 일관성 있게 변경하고자 할 때 바로 이 `application.html.erb` 파일에서 작업을 해 주면 된다. `Bootstrap`의 `navbar` 메뉴를 추가하여 이 파일을 아래와 같이 수정한다.
 
-```
+```html
 <body>
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -90,7 +90,7 @@ $ rails new rcafe
 
 페이지 상단 부분이 `navbar`에 가려지는 문제를 해결하기 위해서는 아래와 같이 `app/assets/stylesheets/application.css.scss` 파일을 수정한다. 하단의 `body { top-padding: 60px; }`을 추가한다.
 
-```
+```css
 $light-orange: #ff8c00;
 $navbar-default-color: $light-orange;
 $navbar-default-bg: #312312;

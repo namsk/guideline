@@ -44,7 +44,7 @@ edit_bulletin_post GET    /bulletins/:bulletin_id/posts/:id/edit(.:format) posts
 
 특정 게시판의 게시물 목록을 불러오는 예를 들어 보자.
 
-```
+```bash
 Prefix : bulletin_posts
 Verb : GET
 URI Pattern : /bulletins/:bulletin_id/posts(.:format)

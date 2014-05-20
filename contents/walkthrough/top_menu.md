@@ -10,19 +10,19 @@
 
 이를 위해서 `Gemfile`에 `friendly_id` 젬을 추가하고,
 
-```
+```ruby
 gem 'friendly_id', '~> 5.0.0'
 ```
 
 설치한다.
 
-```
+```bash
 $ bin/bundle install
 ```
 
 그리고 `Bulletin` 모델 클래스 파일(`app/models/bulletin.rb`)을 아래와 같이 변경한다.
 
-```
+```ruby
 class Bulletin < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title
@@ -35,7 +35,7 @@ end
 
 추가로, `app/controllers/bulletins_controller.rb` 파일에서 아래와 같이 수정한다. (`friendly`를 추가한다)
 
-```
+```ruby
 private
     def set_bulletin
       @bulletin = Bulletin.friendly.find(params[:id])

@@ -2,7 +2,7 @@
 
 `index` 액션의 뷰 파일 중 인스턴스 변수(`@posts`)를 사용하는 부분만 집중해서 보자.
 
-```
+```html
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.title %></td>
@@ -22,7 +22,7 @@
 
 `app/views/layouts/application.html.erb` 파일에서 아래와 같이 `<ul class='nav navbar-nav'>` 부분을 아래와 같이 변경한다.
 
-```
+```html
 <ul class="nav navbar-nav">
   <li class="<%= params[:bulletin_id] == '공지사항' ? 'active' : '' %>"><%= link_to '공지사항', bulletin_posts_path('공지사항') %></li>
   <li class="<%= params[:bulletin_id] == '새소식' ? 'active' : '' %>"><%= link_to '새소식', bulletin_posts_path('새소식') %></li>

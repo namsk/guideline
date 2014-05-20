@@ -62,7 +62,7 @@ DB 쿼리후, 특정 모델의 특정 객체(들)를 삭제한다.
 
 ## posts 컨트롤러
 
-```
+```ruby
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -147,13 +147,13 @@ end
 
 컨트롤러의 상단에서 아래와 같은 `before_action` 필터를 볼 수 있다.
 
-```
+```ruby
 before_action :set_post, only: [:show, :edit, :update, :destroy]
 ```
 
 이것은 `posts` 컨트롤러의 액션 중에서 `show`, `edit`,`update`, `destroy` 액션이 실행되기 전에 반드시 `set_post` 메소드를 실행하라는 필터인 것이다. 이와 같은 필터 메소드는 해당 컨트롤러에서 `private`으로 선언되어 있다.
 
-```
+```ruby
 private
   def set_post
     @post = Post.find(params[:id])
@@ -178,7 +178,7 @@ end
 
 `posts` 컨트롤러 클래스 파일의 하단에는 아래와 같이 정의되어 있다.
 
-```
+```ruby
 private
   def post_params
     params.require(:post).permit(:title, :content)
