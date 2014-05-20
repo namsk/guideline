@@ -29,6 +29,7 @@
     * [갤러리형 레이아웃 작성하기](contents/walkthrough/gallery_layout.md)
     * [flash 메시지 표시하기](contents/walkthrough/flash_message.md)
 * [프로젝트 배포하기](deployment/first.md)
+    * [Capistrano 설치](deployment/capfile.md)
 * [부록](appendices/appendix.md)
     * [공동집필에 참여하기](appendices/collaboration.md)
     * [액티브레코드란?](appendices/active_record.md)
