@@ -30,6 +30,7 @@
     * [flash 메시지 표시하기](contents/walkthrough/flash_message.md)
 * [프로젝트 배포하기](deployment/first.md)
     * [Capistrano 설치](deployment/capfile.md)
+    * [deploy.rb 설정](deployment/deployrb.md)
 * [부록](appendices/appendix.md)
     * [공동집필에 참여하기](appendices/collaboration.md)
     * [액티브레코드란?](appendices/active_record.md)
