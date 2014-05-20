@@ -48,8 +48,8 @@ $ rails new rcafe
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <a class="navbar-brand" href="#">Project name</a>
           </button>
+            <a class="navbar-brand" href="#">Project name</a>
          </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
