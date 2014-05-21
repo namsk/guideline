@@ -84,6 +84,8 @@ $ gem install bundler
 $ rbenv rehash
 ```
 
+> **Hint** [rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)을 설치하면, 매번 `rbenv rehash` 명령을 실행하지 않아도 된다. 또한, [rbenv-bundler](https://github.com/carsomyr/rbenv-bundler)를 설치하면 `bundle exec`를 생략해도 된다.
+
 ## 윈도우
 
 윈도우에서는 `rbenv`을 사용할 수 없다. 관련 문서에 의하면, 대신에 [RubyInstaller](http://misheska.com/blog/2013/06/15/using-rbenv-to-manage-multiple-versions-of-ruby/) 또는 [Pik](https://github.com/vertiginous/pik)를 사용할 것을 권한다.
