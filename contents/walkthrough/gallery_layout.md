@@ -36,6 +36,26 @@ gem 'carrierwave'
 $ bundle install
 ```
 
+## 한글 파일명의 인코딩 문제
+
+`carreirwave` 젬을 사용할 때에는 한글파일명을 가진 파일을 업로드할 때 문제가 있다. 즉, 한글 파일명을 가진 파일이 업로드되면 `sanitization` 과정에서 한글이 모두 "_" 문자로 대체되어 파일명을 알수 없게 된다.
+
+`github`에 [해결책](https://github.com/jnicklas/carrierwave#securing-uploads)이 기술되어 있어 소개한다.
+
+`confit/initializers/carrierwave.rb` 파일을 생성한 후 아래의 코드를 추가해 주기만 하면 한글파일명이 깨지지 않고 그대로 업로드되는 것을 확인할 수 있다.
+
+```ruby
+# Allow non-ascii letters in uploaded filenames
+CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
+```
+
+그러나 이렇게 하면 한글파일명 중에 스페이스가 포함되면 이 또한 `"_"` 문자로 보이게 되는데, 이것 마저도 스페이스 그대로 보이게 하려면 `"\s"`를 추가해 주면 된다.
+
+```ruby
+# Allow non-ascii letters in uploaded filenames
+CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\s\.\-\+]/
+```
+
 ## 업로드 클래스의 생성
 
 이미지 업로드를 위한 `Picture`라는 이름을 가지는 업로더를 생성한다.
@@ -115,6 +135,25 @@ class PictureUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+end
+```
+
+## 빈 디렉토리 자동으로 삭제하기
+
+업로드한 이미지를 삭제하면 해당 폴더가 남아 있게 된다. 아래와 같이 업로더 클래스에 추가하면 자동으로 빈 폴더가 삭제된다.
+
+```ruby
+# 업로드 상단에 아래의 after 매크로를 추가한다.
+after :remove, :delete_empty_upstream_dirs
+
+def delete_empty_upstream_dirs
+  path = ::File.expand_path(store_dir, root)
+  Dir.delete(path) # fails if path not empty dir
+
+  path = ::File.expand_path(base_store_dir, root)
+  Dir.delete(path) # fails if path not empty dir
+rescue SystemCallError
+  true # nothing, the dir is not empty
 end
 ```
 
