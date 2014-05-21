@@ -37,7 +37,7 @@ end
 이번에는 `posts` 테이블에 `bulletin_id` 필드를 추가하기 위해 마이그레이션 파일을 작성해 보자.
 
 ```bash
-$ bin/rails g migration AddBulletinIdToPosts bulletin_id:integer:index bulletin_id:integer:index
+$ bin/rails g migration AddBulletinIdToPosts bulletin_id:integer:index
       invoke  active_record
       create    db/migrate/20140509005154_add_bulletin_id_to_posts.rb
 ```
