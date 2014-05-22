@@ -88,7 +88,7 @@ $ rbenv rehash
 
 ## 윈도우
 
-윈도우에서는 `rbenv`을 사용할 수 없다. 관련 문서에 의하면, 대신에 [RubyInstaller](http://misheska.com/blog/2013/06/15/using-rbenv-to-manage-multiple-versions-of-ruby/) 또는 [Pik](https://github.com/vertiginous/pik)를 사용할 것을 권한다.
+윈도우에서는 `rbenv`을 사용할 수 없다. 관련 문서에 의하면, 대신에 [RubyInstaller](http://rubyinstaller.org) 또는 [Pik](https://github.com/vertiginous/pik)를 사용할 것을 권한다.
 
 
 > **Note** [Mischa Taylor's Coding Blog](http://misheska.com/blog/2013/06/15/using-rbenv-to-manage-multiple-versions-of-ruby/) : Rbenv is supported on Linux and Mac OS X. Rbenv doesn’t work on Windows (and isn’t really necessary on Windows as there is no system Ruby on Windows). On Windows, the RubyInstaller and/or Pik are both good alternatives to work with multiple versions of Ruby on the same box.

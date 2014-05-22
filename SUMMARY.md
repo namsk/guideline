@@ -37,6 +37,7 @@
     * [액티브레코드란?](appendices/active_record.md)
     * [ImageMagick 설치하기](appendices/imagemagick.md)
     * [맥전용 랙서버 POW](appendices/pow.md)
+    * [Heroku에 배포하기](appendices/heroku.md)
     * [추천 웹사이트 및 블로그](appendices/blogs.md)
     * [추천도서](appendices/books.md)
     * [추천동영상](appendices/screencasts.md)
