@@ -42,9 +42,15 @@ $ bin/rails g migration AddBulletinIdToPosts bulletin_id:integer:index bulletin_
       create    db/migrate/20140509005154_add_bulletin_id_to_posts.rb
 ```
 
-그리고 `db:migrate` 한다. 여기서 `bulletin_id:integer:index`와 같이 추가할 필드명과 데이터형 다음에 `index` 옵션을 지정하면 해당 필드에 대한 익덱스 파일까지 생성한다.
+그리고 `db:migrate` 한다.
 
-생성된 마이그레이션 파일(`db/migrate/20140509005154_add_bulletin_id_to_posts.rb`)은 아래와 같다.
+```bash
+$ bin/rake db:migrate
+```
+
+여기서 `bulletin_id:integer:index`와 같이 추가할 필드명과 데이터형 다음에 `index` 옵션을 지정하면 해당 필드에 대한 인덱스 파일까지 생성한다.
+
+생성된 마이그레이션 파일(`db/migrate/(생성된 일자가 포함된 일련의 숫자)_add_bulletin_id_to_posts.rb`)은 아래와 같다.
 
 ```ruby
 class AddBulletinIdToPosts < ActiveRecord::Migration
