@@ -62,13 +62,8 @@ DB 쿼리후, 특정 모델의 특정 객체(들)를 삭제한다.
 
 ## posts 컨트롤러
 
-<<<<<<< HEAD
-app/controllers/post_controller.rb 파일
-
-```
-=======
 ```ruby
->>>>>>> 2bc3bb43f9e436b10785e5c4717b5ee5603056c7
+
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
