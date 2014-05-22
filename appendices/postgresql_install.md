@@ -48,11 +48,11 @@ CREATE ROLE sampleuser PASSWORD 'md5afd8d364af0c8efa11183c3454f56c52' NOSUPERUSE
 * `config/database.yml`를 아래와 같이 수정한다.
 
   ```ruby
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: <database-name>   # 원하는 대로 DB 명을 정한다.
-```
+  production:
+    adapter: postgresql
+    encoding: unicode
+    database: <database-name>   # 원하는 대로 DB 명을 정한다.
+  ```
 
 
 
