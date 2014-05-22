@@ -17,7 +17,7 @@ $ brew install postgresql
 ```
 
 
-자세한 내용을 [여기](http://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew-and-lunchy/)를 참고하기 바랍니다.
+자세한 내용은 [여기](http://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew-and-lunchy/)를 참고하기 바란다.
 
 
 ## 2. Postgre.app을 이용하여 설치하기
