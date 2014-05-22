@@ -42,7 +42,7 @@ $ bin/rails g migration AddBulletinIdToPosts bulletin_id:integer:index
       create    db/migrate/20140509005154_add_bulletin_id_to_posts.rb
 ```
 
-위의 `bulletin_id:integer:index`와 같이 추가할 필드명과 데이터형 다음에 `index` 옵션을 지정하면 해당 필드에 대한 인덱스 파일까지 생성한다.
+위의 `bulletin_id:integer:index`와 같이 추가할 필드명과 데이터형 다음에 `index` 옵션을 지정하면 해당 필드에 대한 인덱스 파일이 지정되며, 이는 빠른 검색을 가능하게 한다.
 
 생성된 마이그레이션 파일(`db/migrate/(생성된 일자가 포함된 일련의 숫자)_add_bulletin_id_to_posts.rb`)은 아래와 같다.
 
