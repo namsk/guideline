@@ -12,6 +12,8 @@
 
 ## 유익한 Git 공부 자료
 
+* [Git Cheat Sheet](https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf)
+* [Github Cheat Sheet](https://github.com/marocchino/github-cheat-sheet)
 * [git - 간편 안내서](http://rogerdudler.github.io/git-guide/index.ko.html)
 * [GIT-IMMERSION](http://gitimmersion.com)
 * [Try Git](https://www.codeschool.com/courses/try-git)
@@ -21,5 +23,5 @@
 
 ## Git GUI 툴
 
-* [SourceTree](http://www.sourcetreeapp.com/) : 윈도우 및 맥용 무료 Git GUI. 강추...^^
+* [SourceTree](http://www.sourcetreeapp.com/) : 윈도우 및 맥용 무료 Git GUI. `git-flow` 기본내장. 강추...^^
 * [Tower](http://www.git-tower.com/) : 맥용 유료($59.00. paypal 가능) Git GUI.
