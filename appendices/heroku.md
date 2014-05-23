@@ -90,11 +90,11 @@ $ bundle install
 
 ### 허로쿠에서 App 생성하기
 
-![허로쿠 웹사이트](images/2014-05-22_18-49-38.png)
+![허로쿠 웹사이트](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/rcafe/2014-05-22_18-49-38_zps2da0fee1.png)
 
 생성 후 아래와 같은 결과를 보게 된다.
 
-![](images/2014-05-22_19-02-24.png)
+![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/rcafe/2014-05-22_19-02-24_zps38d79bf5.png)
 
 
 이제 `Finish up` 버튼을 클릭해서 종료한다.
@@ -134,7 +134,7 @@ $ git push origin  # github에 푸시하기
 $ git push heroku master  # 허로쿠에 푸시하기
 ```
 
-![](images/2014-05-22_20-51-00.png)
+![](http://i1373.photobucket.com/albums/ag392/rorlab/Photobucket%20Desktop%20-%20RORLAB/rcafe/2014-05-22_20-51-00_zpsc7d58644.png)
 
 
 ### 브라우저에서 확인하기
