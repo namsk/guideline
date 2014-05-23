@@ -105,5 +105,5 @@ end
 
 ---
 
-> **todo** `fog` 젬 사용법
+> **Note** `fog` 젬 사용법은 [`여기`](https://gist.github.com/cblunt/1303386)를 참고하면 도움이 된다.
 
