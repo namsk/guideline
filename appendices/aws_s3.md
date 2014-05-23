@@ -103,6 +103,7 @@ end
 
 > **Info** `paperclip` 젬을 사용할 때는 [paperclip-s3](https://devcenter.heroku.com/articles/paperclip-s3)를 참고하기 바란다.
 
+---
 
 > **todo** `fog` 젬 사용법
 
