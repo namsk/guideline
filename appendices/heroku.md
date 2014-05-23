@@ -1,16 +1,16 @@
-# Heroku에 배포하기
+# Heroku(허로쿠)에 배포하기
 
 공식웹사이트 : https://www.heroku.com
 
-헤로쿠 서비스를 이용하면 Capistrano를 사용하지 않코도 레일스 프로젝트를 손쉽게 배포할 수 있다. 헤로쿠 서비스는 개발자가 프로젝트 개발에만 집중할 수 있도록 해 준다. 배포 부분은 헤로쿠 서비스가 알아서 대신해 준다.
+허로쿠 서비스를 이용하면 Capistrano를 사용하지 않코도 레일스 프로젝트를 손쉽게 배포할 수 있다. 헤로쿠 서비스는 개발자가 프로젝트 개발에만 집중할 수 있도록 해 준다. 배포 부분은 허로쿠 서비스가 알아서 대신해 준다.
 
 
-## 헤로쿠 준비부터 배포까지
+## 허로쿠 준비부터 배포까지
 
-* [헤로쿠 공식웹사이트](https://www.heroku.com)를 방문하여 회원가입한다.
+* [허로쿠 공식웹사이트](https://www.heroku.com)를 방문하여 회원가입한다.
 * 본인 계정의 `Dashboard`의 하단에 있는 `Create a new app` 버튼을 클릭하여 새로운 어플리케이션을 생성한다. `App` 이름은 본인이 원하는 것으로 해도 무방하다.
-* 로컬머신의 커맨드라인 쉘에서 `헤로쿠 툴벨트`(아래 참고)를 설치한다.
-* `Gemfile`에 헤로쿠 배포에 필요한 두개의 젬을 추가하고,
+* 로컬머신의 커맨드라인 쉘에서 `허로쿠 툴벨트`(아래 참고)를 설치한다.
+* `Gemfile`에 허로쿠 배포에 필요한 두개의 젬을 추가하고,
   ```ruby
   gem 'pg', group: :production
   gem 'rails_12factor', group: :production
@@ -33,7 +33,7 @@
   ```
 
 
-* 이제 아래와 같이 헤로쿠로 배포작업을 시작한다.
+* 이제 아래와 같이 허로쿠로 배포작업을 시작한다.
 
   ```bash
   $ git push heroku master
@@ -45,14 +45,14 @@
 * 자세한 내용은 [여기](https://devcenter.heroku.com/articles/quickstart)를 참고하기 바란다.
 
 
-## 헤로쿠에서 레일스 4 프로젝트 배포하기
+## 허로쿠에서 레일스 4 프로젝트 배포하기
 
 자세한 내용은 [여기](https://devcenter.heroku.com/articles/getting-started-with-rails4)를 참고하기 바란다.
 
 
-### 헤로쿠 툴벨트 설치하기
+### 허로쿠 툴벨트 설치하기
 
-로컬 운영체제에 맞는 헤로쿠 툴벨트를 설치한다. 이후에는 터미널에서 헤로쿠에서 `heroku` 명령을 사용할 수 있게 된다
+로컬 운영체제에 맞는 허로쿠 툴벨트를 설치한다. 이후에는 터미널에서 헤로쿠에서 `heroku` 명령을 사용할 수 있게 된다
 
 ```bash
 $ heroku
@@ -76,7 +76,7 @@ Primary help topics, type "heroku help TOPIC" for more details:
 
 ### pg 젬 추가하기
 
-헤로쿠로 배포하면 자동으로 `Postgresql` 데이터베이스를 사용하기 때문에 `Gemfile`에 `pg` 젬을 추가하고,
+허로쿠로 배포하면 자동으로 `Postgresql` 데이터베이스를 사용하기 때문에 `Gemfile`에 `pg` 젬을 추가하고,
 
 ```ruby
 gem 'pg', group: :production
@@ -88,9 +88,9 @@ gem 'pg', group: :production
 $ bundle install
 ```
 
-### 헤로쿠에서 App 생성하기
+### 허로쿠에서 App 생성하기
 
-![헤로쿠 웹사이트](images/2014-05-22_18-49-38.png)
+![허로쿠 웹사이트](images/2014-05-22_18-49-38.png)
 
 생성 후 아래와 같은 결과를 보게 된다.
 
@@ -105,7 +105,7 @@ $ bundle install
 $ git remote add heroku git@heroku.com:rcafe.git
 ```
 
-### 헤로쿠 배포를 위한 젬 추가
+### 허로쿠 배포를 위한 젬 추가
 
 아래와 같이 젬을 추가하고,
 
@@ -128,10 +128,10 @@ $ git push origin  # github에 푸시하기
 ```
 
 
-### 헤로쿠에 실제 배포하기
+### 허로쿠에 실제 배포하기
 
 ```bash
-$ git push heroku master  # 헤로쿠에 푸시하기
+$ git push heroku master  # 허로쿠에 푸시하기
 ```
 
 ![](images/2014-05-22_20-51-00.png)
