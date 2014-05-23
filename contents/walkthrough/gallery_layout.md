@@ -18,7 +18,7 @@ Delegates: bzlib freetype jng jpeg ltdl png xml zlib
 ~중략~
 ```
 
-만약 설치되어 있지 않으면 [`ImageMagick 설치하기`](../appendices/imagemagick.html)를 참고하여 설치하면 된다.
+만약 설치되어 있지 않으면 [`ImageMagick 설치하기`](/appendices/imagemagick.html)를 참고하여 설치하면 된다.
 
 ## Carrierwave 젬 설치하기
 
