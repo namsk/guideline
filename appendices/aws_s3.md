@@ -71,6 +71,24 @@ CarrierWave.configure do |config|
 end if Rails.env == 'production'
 ```
 
+`config.asset_host`값을 `AWS S3`의 `bucket`의 `end point`로 변경한다.
+
+위에서 사용한 'S3_BUCKET_NAME', 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY'을 시스템 환경변수로 등록하기 위해서 `~/.bash_profile` 또는 `~/.zshrc` 파일을 열어서 아래와 같이 추가한다.
+
+```
+export S3_BUCKET_NAME=<user-bucket-name>
+export AWS_ACCESS_KEY_ID=<user-access-key>
+export AWS_SECRET_ACCESS_KEY=<user-secret-key>
+```
+
+허로쿠로 배포시에는 아래와 같이 추가 작업을 해 준다.
+
+```bash
+$ heroku config:set S3_BUCKET_NAME=<user-bucket-name>
+$ heroku config:set AWS_ACCESS_KEY_ID=<user-access-key>
+$ heroku config:set AWS_SECRET_ACCESS_KEY=<user-secret-key>
+```
+
 그리고 파일 업로드 클래스 파일에 아래와 같이 `storage` 옵션 조건을 추가한다.
 
 ```ruby
@@ -80,7 +98,6 @@ else
   storage :file
 end
 ```
-
 
 > **Info** `paperclip` 젬을 사용할 때는 [paperclip-s3](https://devcenter.heroku.com/articles/paperclip-s3)를 참고하기 바란다.
 
