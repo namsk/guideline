@@ -2,17 +2,17 @@
 
 `AWS S3` : ***A***mazone ***W***eb ***S***ervices ***S***imple ***S***torage ***S***ervices
 
-레일스 어플리케이션을 허로쿠로 배포할 때의 문제점은 허로쿠의 [ephemeral filesystem](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem) 때문이다. ephemeral이란 단어는 단명의, 단 하루뿐인이란 의미를 가지는데, 미루어 짐작할 수 있듯이 업로드된 파일이 일정시간 지나면 삭제된다.
+레일스 어플리케이션을 허로쿠로 배포할 때의 문제점은 허로쿠의 [ephemeral filesystem](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem) 때문이다. `ephemeral`이란 단어는 단명의, 단 하루뿐인이란 의미를 가지는데, 미루어 짐작할 수 있듯이 업로드된 파일이 일정시간 지나면 자동으로 삭제된다.
 
 이에 대한 해결책으로 `AWS S3`를 이용하면 허로쿠로 배포된 레일스 어플리케이션에서 파일 업로드 후 지속적으로 이미지를 볼 수 있게 된다.
 
-S3의 모든 파일은 디렉토리와 매우 흡사한 상위레벨의 컨테이너로 동작하는 `bucket`이라는 곳에 저장된다. S3로 파일을 보내면 하나의 `bucket`에 속하게 되는데 `bucket` 명을 전체 아마존 시스템에서 유일해야 한다.
+`S3`의 모든 파일은, 디렉토리와 매우 흡사한 상위레벨의 컨테이너로 동작하는, `bucket`이라는 곳에 저장된다. `S3`로 파일을 보내면 하나의 `bucket`에 속하게 되는데, `bucket` 명은 전체 아마존 시스템에서 유일해야 한다.
 
-`Access Key ID`와 `Secret Access Key`가 있어야 S3 API로 접근할 수 있다. 여기서 access 키는 S3 사용자 계정이고 secret 키는 비밀번호에 해당하기 때문에 다른 사람에게 노출되지 않도록 해야 한다.
+`Access Key ID`와 `Secret Access Key`가 있어야 `S3 API`로 접근할 수 있다. 여기서 access 키는 `S3` 사용자 계정이고 secret 키는 비밀번호에 해당하기 때문에 다른 사람에게 노출되지 않도록 주의해야 한다.
 
 ## S3 셋업
 
-S3를 사용하기 위해서는 `AWS Credentials`와 파일 저장을 위한 `bucket`을 확보해야 한다.
+`S3`를 사용하기 위해서는 `AWS Credentials`와 파일 저장을 위한 `bucket`을 확보해야 한다. 각각에 대해서는 아래를 참조하기 바란다.
 
 ### Credentials
 
@@ -20,7 +20,7 @@ S3를 사용하기 위해서는 `AWS Credentials`와 파일 저장을 위한 `bu
 
 ### Bucket
 
-자세한 내용는 [`여기`](https://devcenter.heroku.com/articles/s3#bucket)를 참고하기 바란다.
+자세한 내용은 [`여기`](https://devcenter.heroku.com/articles/s3#bucket)를 참고하기 바란다.
 
 ### Bucket Naming
 
@@ -28,7 +28,7 @@ S3를 사용하기 위해서는 `AWS Credentials`와 파일 저장을 위한 `bu
 
 ## Carrierwave 젬 사용시 S3 셋업 방법
 
-레일스에서는 S3 저장을 위한  `aws-sdk` 라이브러리를 사용할 수 있는데 [`carrierwave-aws`](https://github.com/sorentwo/carrierwave-aws)라는 carrierwave용  젬이 있다. 따라서 Gemfile에서 이미 등록한 `carrierave` 대신에 `carrierwave-aws` 젬을 추가하면 된다. 왜냐하면 이 젬을 설치할 때 젬 의존성에 따라 `carrierwave`와 `aws-skd` 젬이 자동으로 설치되기 때문이다.
+레일스에서는 `S3` 저장을 위한  `aws-sdk` 라이브러리를 사용할 수 있는데 [`carrierwave-aws`](https://github.com/sorentwo/carrierwave-aws)라는 `carrierwave`용  젬이 있다. 따라서 `Gemfile`에서 이미 등록한 `carrierave` 대신에 `carrierwave-aws` 젬을 추가하면 된다. 왜냐하면, 이 젬을 설치할 때 젬 의존성에 따라 `carrierwave`와 `aws-skd` 젬이 자동으로 설치되기 때문이다.
 
 ```ruby
 gem 'carrierwave-aws'
@@ -104,5 +104,5 @@ end
 > **Info** `paperclip` 젬을 사용할 때는 [paperclip-s3](https://devcenter.heroku.com/articles/paperclip-s3)를 참고하기 바란다.
 
 
-
+> **todo** `fog` 젬 사용법
 
