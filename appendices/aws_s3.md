@@ -71,7 +71,7 @@ CarrierWave.configure do |config|
 end if Rails.env == 'production'
 ```
 
-`config.asset_host`값을 `AWS S3`의 해당 `bucket`의 `Endpoint` 주소로 변경한다.
+`config.asset_host`값을 `AWS S3`의 해당 `bucket`의 `Endpoint` 주소로 변경한다. (예, `https://s3-ap-northeast-1.amazonaws.com/<bucket-name>`)
 
 위에서 사용한 'S3_BUCKET_NAME', 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY'을 시스템 환경변수로 등록하기 위해서 `~/.bash_profile` 또는 `~/.zshrc` 파일을 열어서 아래와 같이 추가한다.
 
