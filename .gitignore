@@ -1,6 +1,5 @@
 .DS_Store
 _book/
 .grunt/
-node_modules
 **/*.pdf
 **/*.epub
