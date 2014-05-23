@@ -38,6 +38,7 @@
     * [ImageMagick 설치하기](appendices/imagemagick.md)
     * [PostgreSQL 설치하기](appendices/postgresql_install.md)
     * [Heroku에 배포하기](appendices/heroku.md)
+    * [AWS S3 사용하기](appendices/aws_s3.md)
     * [맥전용 랙서버 POW](appendices/pow.md)
     * [추천 웹사이트 및 블로그](appendices/blogs.md)
     * [추천도서](appendices/books.md)
