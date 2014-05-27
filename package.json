@@ -23,5 +23,6 @@
     },
     "peerDependencies": {
         "grunt": "~0.4.1"
-    }
+    },
+    "chromium-args": "--ignore-certificate-errors"
 }
