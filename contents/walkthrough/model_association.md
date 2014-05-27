@@ -42,9 +42,9 @@ $ bin/rails g migration AddBulletinIdToPosts bulletin_id:integer:index
       create    db/migrate/20140509005154_add_bulletin_id_to_posts.rb
 ```
 
-그리고 `db:migrate` 한다. 여기서 `bulletin_id:integer:index`와 같이 추가할 필드명과 데이터형 다음에 `index` 옵션을 지정하면 해당 필드에 대한 익덱스 파일까지 생성한다.
+위의 `bulletin_id:integer:index`와 같이 추가할 필드명과 데이터형 다음에 `index` 옵션을 지정하면 해당 필드에 대한 인덱스 파일이 지정되며, 이는 빠른 검색을 가능하게 한다.
 
-생성된 마이그레이션 파일(`db/migrate/20140509005154_add_bulletin_id_to_posts.rb`)은 아래와 같다.
+생성된 마이그레이션 파일(`db/migrate/(생성된 일자가 포함된 일련의 숫자)_add_bulletin_id_to_posts.rb`)은 아래와 같다.
 
 ```ruby
 class AddBulletinIdToPosts < ActiveRecord::Migration
@@ -67,7 +67,7 @@ $ bin/rake db:migrate
 == 20140509005154 AddBulletinIdToPosts: migrated (0.0040s) ====================
 ```
 
-## 레일스 콘솔
+## 레일스 콘솔에서 확인
 
 지금까지 작업한 것이 제대로 동작하는지를 확인하기 위해서 터미널에서 아래와 같이 레일스 콘솔을 실행해 보자.
 
@@ -111,7 +111,8 @@ irb(main):001:0> bulletin = Bulletin.create title:"공지사항"
 그리고 `post` 객체도 하나 생성하자.
 
 ```bash
-irb(main):003:0> post = Post.create title:"레일스 가이드라인 책 집필", content:"초보자를 위한 레일스   (0.0ms)  begin transaction
+irb(main):003:0> post = Post.create title:"레일스 가이드라인 책 집필", content:"초보자를 위한 레일스"
+   (0.0ms)  begin transaction
   SQL (0.2ms)  INSERT INTO "posts" ("content", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["content", "초보자를 위한 레일스 가이드라인"], ["created_at", "2014-05-04 09:06:54.879852"], ["title", "레일스 가이드라인 책 집필"], ["updated_at", "2014-05-04 09:06:54.879852"]]
    (1.3ms)  commit transaction
 => #<Post id: 2, title: "레일스 가이드라인 책 집필", content: "초보자를 위한 레일스 가이드라인", created_at: "2014-05-04 09:06:54", updated_at: "2014-05-04 09:06:54", bulletin_id: nil>
