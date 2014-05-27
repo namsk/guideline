@@ -18,7 +18,7 @@ Delegates: bzlib freetype jng jpeg ltdl png xml zlib
 ~중략~
 ```
 
-만약 설치되어 있지 않으면 [`ImageMagick 설치하기`](../appendices/imagemagick.html)를 참고하여 설치하면 된다.
+만약 설치되어 있지 않으면 [`ImageMagick 설치하기`](../../appendices/imagemagick.html)를 참고하여 설치하면 된다.
 
 ## Carrierwave 젬 설치하기
 
@@ -42,7 +42,7 @@ $ bundle install
 
 `github`에 [해결책](https://github.com/jnicklas/carrierwave#securing-uploads)이 기술되어 있어 소개한다.
 
-`confit/initializers/carrierwave.rb` 파일을 생성한 후 아래의 코드를 추가해 주기만 하면 한글파일명이 깨지지 않고 그대로 업로드되는 것을 확인할 수 있다.
+`config/initializers/carrierwave.rb` 파일을 생성한 후 아래의 코드를 추가해 주기만 하면 한글파일명이 깨지지 않고 그대로 업로드되는 것을 확인할 수 있다.
 
 ```ruby
 # Allow non-ascii letters in uploaded filenames

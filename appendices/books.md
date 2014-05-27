@@ -2,7 +2,10 @@
 
 [원서]
 
-* [Ruby on Rails Tutorial, Michael Hartl](http://www.railstutorial.org) (유료)
+* [Ruby on Rails Tutorial, Michael Hartl](http://www.railstutorial.org)
+
+  : [READ ONLINE FREE](http://www.railstutorial.org/book)은 무료이고, [eBook, screencasts](http://www.railstutorial.org/#pricing)은 유료.
+
 * [Agile Web Development with Rails 4, Sam ruby, Dave Thomas, David Heinemeier Hansson](http://pragprog.com/book/rails4/agile-web-development-with-rails-4) (유료)
 * [Learn Ruby on Rails, Daniel Kehoe](http://learn-rails.com/learn-ruby-on-rails.html) (유료)
 
