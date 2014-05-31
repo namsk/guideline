@@ -1,15 +1,11 @@
 {
     "plugins": [
         "disqus",
-        "ga",
         "richquotes"
     ],
     "pluginsConfig": {
         "disqus": {
             "shortName": "railsguideline"
-        },
-        "ga": {
-            "token": "UA-30294363-3"
         },
         "richquotes": {
             "todos": true
